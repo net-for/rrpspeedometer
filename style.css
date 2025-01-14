@@ -1,42 +1,34 @@
 body {
     margin: 0;
+    padding: 0;
     background: transparent;
-    overflow: hidden; /* Prevent scrolling */
+    overflow: hidden;
 }
 
 .speedometer {
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
     width: 200px;
     height: 200px;
-    position: fixed;
-    bottom: 10%; /* Adjust position as needed */
-    right: 5%; /* Adjust position as needed */
-    transform: translate(50%, 50%);
-}
-
-.dial {
-    position: relative;
-    width: 100%;
-    height: 100%;
+    background: radial-gradient(circle, #333 50%, #111 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 5px solid #555;
-    border-radius: 50%;
+    font-family: Arial, sans-serif;
 }
 
-.needle {
-    position: absolute;
-    width: 2px;
-    height: 70px;
-    background: red;
-    transform-origin: bottom;
-    transform: rotate(-90deg);
-    transition: transform 0.1s ease-out;
-}
-
-.speed {
-    position: absolute;
-    bottom: 20px;
-    font-size: 20px;
+.speed-value {
+    font-size: 48px;
     font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.speed-unit {
+    font-size: 18px;
+    color: #aaa;
 }
