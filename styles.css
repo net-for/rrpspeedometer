@@ -3,62 +3,59 @@ body {
     padding: 0;
     background: transparent;
     overflow: hidden;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
 .speedometer {
     position: fixed;
     bottom: 5%;
     right: 5%;
-    width: 180px; /* Reduced size for better balance */
-    height: 180px; /* Reduced size */
-    background: transparent; /* Full transparency */
+    width: 180px; /* Compact and balanced size */
+    height: 180px;
+    background: transparent; /* Fully transparent background */
     border-radius: 50%;
-    border: 6px solid transparent; /* Border transparency for gradient effect */
-    background-image: radial-gradient(circle at center, #ff5c8d, #ff8f37, #ffef3a); /* Gradient color effect */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.3); /* Subtle shadows */
+    border: 5px solid #fff; /* Clean white border for a glowing effect */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: 'Arial', sans-serif;
-    transition: all 0.3s ease; /* Smooth transition for any changes */
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.2); /* Outer and inner glow */
+    transition: all 0.3s ease; /* Smooth transition on hover */
 }
 
 .speedometer:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.4);
+    transform: scale(1.1); /* Enlarges when hovered */
+    box-shadow: 0 0 35px rgba(255, 255, 255, 0.8), inset 0 0 20px rgba(255, 255, 255, 0.3); /* Stronger glow on hover */
 }
 
 .speed-value {
-    font-size: 50px; /* Adjusted font size for a good balance */
+    font-size: 60px; /* Bold, large font for the value */
     font-weight: bold;
-    color: #fff;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* Glowing effect for the value */
-    transition: font-size 0.3s ease, text-shadow 0.3s ease;
+    color: #fff; /* Bright white text */
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.8); /* Glowing effect for the number */
 }
 
 .speed-unit {
-    font-size: 18px; /* Slightly smaller unit size */
-    color: #fff;
-    text-shadow: 0 0 12px rgba(255, 255, 255, 0.5); /* Glow for the unit */
+    font-size: 22px; /* Unit text is slightly smaller */
+    color: #fff; /* White for readability */
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.6); /* Subtle glow effect for the unit */
 }
 
-/* For responsiveness */
+/* Responsiveness */
 @media (max-width: 768px) {
     .speedometer {
         width: 150px;
         height: 150px;
-        bottom: 10%;
-        right: 5%;
+        bottom: 8%;
     }
 
     .speed-value {
-        font-size: 45px;
+        font-size: 50px;
     }
 
     .speed-unit {
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 
@@ -66,14 +63,14 @@ body {
     .speedometer {
         width: 130px;
         height: 130px;
-        bottom: 15%;
+        bottom: 12%;
     }
 
     .speed-value {
-        font-size: 38px;
+        font-size: 40px;
     }
 
     .speed-unit {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
