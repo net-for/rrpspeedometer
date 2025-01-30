@@ -3,32 +3,75 @@ body {
     padding: 0;
     background: transparent;
     overflow: hidden;
+    font-family: Arial, sans-serif;
 }
 
 .speedometer {
     position: fixed;
-    bottom: 10%;
+    bottom: 5%;
     right: 5%;
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle, #333 50%, #111 100%);
+    width: 150px; /* Reduced size */
+    height: 150px; /* Reduced size */
+    background: rgba(0, 0, 0, 0.6); /* Transparent black background */
     border-radius: 50%;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8), inset 0 0 10px rgba(255, 255, 255, 0.2); /* Outer and inner shadow for depth */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    transition: all 0.3s ease; /* Smooth transition for any changes */
+}
+
+.speedometer:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7), inset 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
 .speed-value {
-    font-size: 48px;
+    font-size: 36px; /* Slightly smaller font size for the speed */
     font-weight: bold;
     color: #fff;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Glowing text */
+    transition: font-size 0.3s ease, text-shadow 0.3s ease;
 }
 
 .speed-unit {
-    font-size: 18px;
-    color: #aaa;
+    font-size: 14px;
+    color: #ddd;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3); /* Slight shadow for the unit */
+}
+
+/* For responsiveness */
+@media (max-width: 768px) {
+    .speedometer {
+        width: 120px;
+        height: 120px;
+        bottom: 10%;
+        right: 5%;
+    }
+
+    .speed-value {
+        font-size: 28px;
+    }
+
+    .speed-unit {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .speedometer {
+        width: 100px;
+        height: 100px;
+        bottom: 15%;
+    }
+
+    .speed-value {
+        font-size: 24px;
+    }
+
+    .speed-unit {
+        font-size: 10px;
+    }
 }
